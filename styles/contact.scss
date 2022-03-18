@@ -1,0 +1,65 @@
+@import "./constants.scss";
+
+input {
+	width: 100%;
+	padding: 0.75em 1em;
+	border: 1px solid $color-text;
+	border-radius: 0.5em;
+	outline: none;
+	color: $color-accent;
+	font-family: inherit;
+	font-size: 1em;
+
+	&::placeholder {
+		opacity: 0.5;
+	}
+}
+
+.form-row {
+	display: flex;
+	flex-direction: column;
+	gap: 3em;
+}
+
+.email-input.invalid {
+	position: relative;
+
+	> input {
+		border: 2px solid $color-red;
+		border-radius: 0.5em 0.5em 0 0;
+	}
+
+	&::before {
+		content: url("../images/icon-error.svg");
+		position: absolute;
+		height: 20px;
+		top: 50%;
+		right: 1em;
+		transform: translateY(-50%);
+	}
+
+	&::after {
+		content: "Whoops, make sure it's an email.";
+		position: absolute;
+		width: 100%;
+		bottom: -2em;
+		left: 0;
+		padding: 0.5em 1em;
+		border-radius: 0 0 0.5em 0.5em;
+		background-color: $color-red;
+		color: white;
+		text-align: start;
+		font-size: 0.75em;
+		font-style: italic;
+		font-weight: 500;
+	}
+}
+
+@media (min-width: 40em) {
+	.form-row {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 1em;
+		align-items: center;
+	}
+}

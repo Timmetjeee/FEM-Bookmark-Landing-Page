@@ -1,0 +1,65 @@
+input {
+  width: 100%;
+  padding: 0.75em 1em;
+  border: 1px solid #9194a1;
+  border-radius: 0.5em;
+  outline: none;
+  color: #252b46;
+  font-family: inherit;
+  font-size: 1em;
+}
+input::-moz-placeholder {
+  opacity: 0.5;
+}
+input:-ms-input-placeholder {
+  opacity: 0.5;
+}
+input::placeholder {
+  opacity: 0.5;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.email-input.invalid {
+  position: relative;
+}
+.email-input.invalid > input {
+  border: 2px solid #fa5757;
+  border-radius: 0.5em 0.5em 0 0;
+}
+.email-input.invalid::before {
+  content: url("../images/icon-error.svg");
+  position: absolute;
+  height: 20px;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
+}
+.email-input.invalid::after {
+  content: "Whoops, make sure it's an email.";
+  position: absolute;
+  width: 100%;
+  bottom: -2em;
+  left: 0;
+  padding: 0.5em 1em;
+  border-radius: 0 0 0.5em 0.5em;
+  background-color: #fa5757;
+  color: white;
+  text-align: start;
+  font-size: 0.75em;
+  font-style: italic;
+  font-weight: 500;
+}
+
+@media (min-width: 40em) {
+  .form-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1em;
+    align-items: center;
+  }
+}/*# sourceMappingURL=contact.css.map */

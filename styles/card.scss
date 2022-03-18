@@ -1,0 +1,27 @@
+@import "./constants.scss";
+
+.card {
+	box-shadow: 0 1px 1px $color-light;
+	margin: 2em;
+}
+
+.card-spacer {
+	display: block;
+	margin-block: 2em 0.25em;
+}
+
+@media (min-width: 60em) {
+	.card-grid {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.card:first-child {
+			margin-bottom: 6em;
+		}
+
+		.card:last-child {
+			margin-top: 6em;
+		}
+	}
+}

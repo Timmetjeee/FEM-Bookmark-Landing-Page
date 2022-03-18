@@ -1,0 +1,43 @@
+@import "./constants.scss";
+
+.hero-image {
+	display: block;
+	position: relative;
+	margin-bottom: 5em;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 25%;
+		right: -40%;
+		width: 120%;
+		height: 80%;
+		z-index: -1;
+		background-color: $color-primary;
+		border-radius: 10em 0 0 10em;
+	}
+}
+
+@media (min-width: 60em) {
+	#hero {
+		text-align: start;
+
+		> .container {
+			display: flex;
+			align-items: center;
+			gap: 3em;
+
+			> div {
+				width: 50%;
+			}
+
+			> .hero-image {
+				order: 1;
+			}
+		}
+	}
+
+	.hero-image {
+		display: inline-block;
+	}
+}

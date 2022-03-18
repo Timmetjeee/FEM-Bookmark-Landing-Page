@@ -1,0 +1,98 @@
+@use "./constants.scss" as *;
+
+@import "./accordion.scss";
+@import "./card.scss";
+@import "./constants.scss";
+@import "./header.scss";
+@import "./hero.scss";
+@import "./features.scss";
+@import "./button.scss";
+@import "./contact.scss";
+@import "./footer.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: "Rubik", sans-serif;
+	font-size: clamp(0.875rem, calc(0.625vw + 0.5rem), 1.5rem);
+	text-align: center;
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+	color: $color-accent;
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 1.75em;
+	margin: 1em 0;
+}
+
+p {
+	color: $color-text;
+}
+
+img {
+	max-width: 100%;
+}
+
+section {
+	padding: 1.5em 0;
+}
+
+.container {
+	width: clamp(15em, 82.5%, 75em);
+	margin-inline: auto;
+}
+
+.text-container {
+	max-width: 40em;
+	margin: 3em auto;
+}
+
+.white-text {
+	color: white;
+}
+
+.spaced-text {
+	text-transform: uppercase;
+	letter-spacing: 0.3ch;
+	font-size: 0.8em;
+}
+
+.primary-background {
+	background-color: $color-primary;
+
+	::selection {
+		background-color: white;
+		color: $color-primary;
+	}
+}
+
+.no-scroll {
+	position: fixed;
+	overflow-y: scroll;
+}
+
+::selection {
+	background-color: $color-primary;
+	color: white;
+}

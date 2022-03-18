@@ -1,0 +1,117 @@
+.feature-selector {
+  margin: 2em 0 4em 0;
+}
+
+.feature:not(.active) {
+  display: none;
+}
+
+.feature-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 1.2em;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  color: #9194a1;
+  font-family: inherit;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.feature-button.active {
+  color: #252b46;
+}
+.feature-button.active::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 0.25em;
+  bottom: 0;
+  left: 35%;
+  margin-inline: auto;
+  background-color: #fa5757;
+  -webkit-animation: slide 0.5s ease-in-out;
+          animation: slide 0.5s ease-in-out;
+}
+.feature-button:last-child {
+  border-bottom: 1px solid #e0e0e0;
+}
+.feature-button:hover, .feature-button:focus-visible {
+  color: #fa5757;
+}
+
+.feature-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  margin-bottom: 5em;
+}
+.feature-image > img {
+  display: block;
+}
+.feature-image::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: -40%;
+  width: 120%;
+  height: 80%;
+  z-index: -1;
+  background-color: #5368df;
+  border-radius: 0 10em 10em 0;
+}
+
+@media (min-width: 60em) {
+  .feature-selector {
+    display: flex;
+    justify-content: center;
+  }
+
+  .feature-button {
+    width: 20%;
+    border-top: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .feature-button.active::after {
+    width: 100%;
+    left: 0;
+  }
+
+  .feature {
+    display: flex;
+    align-items: center;
+    min-height: 22.5em;
+    gap: 5em;
+    text-align: start;
+  }
+  .feature > div {
+    width: 50%;
+  }
+
+  .feature-image {
+    margin-bottom: 0;
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    -webkit-clip-path: polygon(50% 100%, 50% 0, 50% 0, 50% 100%);
+            clip-path: polygon(50% 100%, 50% 0, 50% 0, 50% 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+            clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+  }
+}
+@keyframes slide {
+  0% {
+    -webkit-clip-path: polygon(50% 100%, 50% 0, 50% 0, 50% 100%);
+            clip-path: polygon(50% 100%, 50% 0, 50% 0, 50% 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+            clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+  }
+}/*# sourceMappingURL=features.css.map */

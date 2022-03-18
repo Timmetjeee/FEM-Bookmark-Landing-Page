@@ -1,0 +1,69 @@
+@import "./constants.scss";
+
+.accordion {
+	margin-block: 3em;
+	text-align: start;
+}
+
+.accordion-entry {
+	padding: 0 0.5em;
+	border-top: 1px solid $color-light;
+
+	&:last-child {
+		border-bottom: 1px solid $color-light;
+	}
+
+	&.expanded {
+		.accordion-arrow {
+			transform: rotate(180deg);
+		}
+
+		.accordion-body {
+			display: block;
+			animation: text-appear 0.3s ease-in-out;
+		}
+	}
+
+	// &:not(.expanded) > .accordion-body {
+	// 	display: none;
+	// }
+}
+
+.accordion-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+
+	&:hover,
+	&:focus-visible {
+		> .accordion-title {
+			color: $color-red;
+		}
+	}
+}
+
+.accordion-title {
+	color: $color-accent;
+	transition: color 0.2s ease-in-out;
+}
+
+.accordion-arrow {
+	transition: transform 0.3s ease-in-out;
+}
+
+.accordion-body {
+	display: none;
+	// opacity: 0;
+	// transition: opacity 0.4s ease-in-out;
+}
+
+@keyframes text-appear {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

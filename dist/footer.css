@@ -1,0 +1,48 @@
+footer {
+  padding: 1.5rem 0;
+  background-color: #252b46;
+}
+footer > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+footer .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+footer .nav-link {
+  color: white;
+  font-size: 0.925rem;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.social-link > svg path {
+  transition: fill 0.3s ease-in-out;
+}
+.social-link:hover > svg path, .social-link:focus > svg path {
+  fill: #fa5757;
+}
+
+@media (min-width: 60em) {
+  footer > .container {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+  }
+  footer .nav-links {
+    flex-direction: row;
+    gap: 3em;
+  }
+
+  .socials {
+    margin-left: auto;
+  }
+}/*# sourceMappingURL=footer.css.map */

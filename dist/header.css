@@ -1,0 +1,111 @@
+header {
+  margin: 1.5em 0;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 25px;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+}
+.dropdown-menu .socials {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  padding: 0;
+}
+.nav-links li {
+  list-style: none;
+  font-size: 0.875em;
+}
+
+.nav-link {
+  color: #252b46;
+  letter-spacing: 0.2ch;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.nav-link:hover, .nav-link:focus-visible {
+  color: #fa5757;
+}
+
+@media (min-width: 60em) {
+  .dropdown-toggle,
+.dropdown-socials {
+    display: none;
+  }
+
+  .dropdown-menu {
+    display: block;
+  }
+}
+@media (max-width: 60em) {
+  .logo,
+.dropdown-toggle {
+    z-index: 2;
+  }
+
+  .dropdown-menu.expanded {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: #252b46;
+    opacity: 0.95;
+    z-index: 1;
+  }
+  .dropdown-menu.expanded .nav-links {
+    width: clamp(15em, 82.5%, 75em);
+    margin: 5em auto 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .dropdown-menu.expanded .nav-link {
+    display: block;
+    padding-block: 1.25em;
+    border-top: 1px solid #9194a1;
+    color: white;
+    font-size: 1.175em;
+    font-weight: 400;
+  }
+  .dropdown-menu.expanded .nav-link:hover, .dropdown-menu.expanded .nav-link:focus-visible {
+    color: #fa5757;
+  }
+  .dropdown-menu.expanded .red-button {
+    width: 100%;
+    background-color: transparent;
+    padding: 0.5em;
+    outline: 2px solid white;
+    outline-offset: -2px;
+    color: white;
+    transition: color 0.3s ease-in-out;
+  }
+  .dropdown-menu.expanded .red-button:hover, .dropdown-menu.expanded .red-button:focus-visible {
+    color: #fa5757;
+    outline-color: #fa5757;
+  }
+  .dropdown-menu.expanded .socials {
+    display: flex;
+    margin-block: auto 2.5em;
+  }
+}/*# sourceMappingURL=header.css.map */

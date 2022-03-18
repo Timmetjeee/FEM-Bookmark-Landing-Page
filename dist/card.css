@@ -1,0 +1,23 @@
+.card {
+  box-shadow: 0 1px 1px #e0e0e0;
+  margin: 2em;
+}
+
+.card-spacer {
+  display: block;
+  margin-block: 2em 0.25em;
+}
+
+@media (min-width: 60em) {
+  .card-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-grid .card:first-child {
+    margin-bottom: 6em;
+  }
+  .card-grid .card:last-child {
+    margin-top: 6em;
+  }
+}/*# sourceMappingURL=card.css.map */

@@ -1,0 +1,43 @@
+.button {
+  display: inline-block;
+  padding: 0.75em 1em;
+  border: none;
+  border-radius: 0.275em;
+  outline: none;
+  margin: 1em 1em 1em 0;
+  background-color: #5368df;
+  color: white;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: pointer;
+}
+.button:hover, .button:focus-visible {
+  background-color: white;
+  color: #5368df;
+  outline: 2px solid #5368df;
+  outline-offset: -2px;
+}
+
+.red-button {
+  background-color: #fa5757;
+  padding: 0.75em 2em;
+  margin: 0;
+}
+.red-button:hover, .red-button:focus-visible {
+  color: #fa5757;
+  outline-color: #fa5757;
+}
+
+.white-button {
+  background-color: white;
+  color: #252b46;
+  opacity: 0.8;
+  border-bottom: 1px solid #e0e0e0;
+}
+.white-button:hover, .white-button:focus-visible {
+  color: #252b46;
+  outline-color: #252b46;
+}/*# sourceMappingURL=button.css.map */
