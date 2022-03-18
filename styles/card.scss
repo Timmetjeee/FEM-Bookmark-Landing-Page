@@ -1,5 +1,13 @@
 @import "./constants.scss";
 
+.card-grid {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2em;
+}
+
 .card {
 	box-shadow: 0 1px 1px $color-light;
 	margin: 2em;
@@ -12,9 +20,7 @@
 
 @media (min-width: 60em) {
 	.card-grid {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		flex-direction: row;
 
 		.card:first-child {
 			margin-bottom: 6em;

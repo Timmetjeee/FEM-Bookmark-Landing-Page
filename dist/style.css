@@ -60,6 +60,14 @@
     opacity: 1;
   }
 }
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
 .card {
   box-shadow: 0 1px 1px #e0e0e0;
   margin: 2em;
@@ -72,9 +80,7 @@
 
 @media (min-width: 60em) {
   .card-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
   }
   .card-grid .card:first-child {
     margin-bottom: 6em;
